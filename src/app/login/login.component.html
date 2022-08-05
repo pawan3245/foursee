@@ -1,0 +1,45 @@
+<div class="container-fluid bg-primary full-div login">
+  <div class="col-xxl-3 col-xl-4 col-lg-5 col-md-7 col-11 mx-auto max-w-login">
+      <div class="row">
+          <div class="col text-center">
+              <img src="assets/login.svg" alt="logo" class="logo-login mb-3" />
+              <h2 class="text-white">
+                  Hi!<br />
+                  Welcome to 4SEE
+              </h2>
+              <p class="text-white mb-4">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore eit dolore magna aliqua</p>
+          </div>
+      </div>
+
+      <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+          <div class="mb-3 col-12">
+              <input type="text" class="form-control" name="email" [(ngModel)]="form.email" required #email="ngModel" />
+              <div class="alert alert-danger" role="alert" *ngIf="email?.errors && f?.submitted">
+                  Username is required!
+              </div>
+          </div>
+          <div class="mb-1 col-12">
+              <input type="password" class="form-control" name="password" [(ngModel)]="form.password" required minlength="6" #password="ngModel" />
+              <div class="alert alert-danger" role="alert" *ngIf="password?.errors && f?.submitted">
+                  <div *ngIf="password.errors.required">Password is required</div>
+                  <div *ngIf="password.errors.minlength">
+                      Password must be at least 6 characters
+                  </div>
+              </div>
+          </div>
+          <div class="mb-3 col-12 text-end">
+              <a href="#" [routerLink]="'/forgot-password'" class="forgot">Forgot password?</a>
+          </div>
+          <div class="mb-3 col-12">
+              <button class="btn btn-primary col-12 d-flex justify-content-between loginBtn">
+                  LOGIN<span><img src="assets/right-arrow.svg" alt="" /></span>
+              </button>
+          </div>
+          <div class="form-group">
+              <div class="alert alert-danger" role="alert" *ngIf="f.submitted && isLoginFailed">
+                  Login failed: {{ errorMessage }}
+              </div>
+          </div>
+      </form>
+  </div>
+</div>

@@ -1,0 +1,703 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import "~ag-grid-community/dist/styles/ag-grid.css";
+@import "~ag-grid-community/dist/styles/ag-theme-balham.css";
+body {
+    font-family: 'Roboto', sans-serif !important;
+    background-color: #E5EBF4;
+}
+
+* {
+    transition: all .03s ease-in-out;
+}
+
+.bg-primary {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#024293+0,022c62+100 */
+    background: #024293;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #024293 0%, #022c62 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #024293 0%, #022c62 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #024293 0%, #022c62 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.full-div {
+    height: 100vh;
+}
+
+.btn-primary {
+    background: #F10005;
+    border-color: #F10005;
+    font-size: 12px;
+    padding: 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    background: #cf0004;
+    border-color: #cf0004;
+    transition: all 0.3s ease-in-out;
+}
+
+input {
+    font-size: 12px;
+    color: #000;
+}
+
+.form-control {
+    padding: 11px 0.75rem;
+    border-radius: 8px;
+    font-size: 13px;
+}
+
+.main-sidebar {
+    bottom: 0;
+    float: none;
+    left: 30px;
+    position: fixed;
+    top: 30px;
+    height: calc(100vh - 60px);
+    z-index: 1038;
+    width: 300px;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.gradient {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#024293+0,022c62+100 */
+    background: #024293;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #024293 0%, #022c62 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #024293 0%, #022c62 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #024293 0%, #022c62 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#024293', endColorstr='#022c62', GradientType=0);
+    /* IE6-9 */
+}
+
+nav {
+    overflow: auto;
+    height: calc(100% - 100px);
+    margin-top: 20px;
+}
+
+nav ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+nav ul li {
+    list-style: none;
+    width: 100%;
+    display: inline-block;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 20px;
+}
+
+nav ul li a {
+    display: inline-block;
+    padding: 10px 30px;
+    color: #fff;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    align-items: center;
+    font-size: 13px;
+}
+
+nav ul li a i {
+    width: 43px;
+    text-align: right;
+    display: inline-block;
+    padding-right: 14px;
+}
+
+
+/* nav ul li a i svg {
+    width: 19px;
+} */
+
+nav ul li:hover a {
+    background: #fff;
+    border-radius: 5px;
+    color: #024293;
+    text-decoration: none;
+}
+
+nav ul li:hover a svg path {
+    fill: #024293;
+    stroke: #024293;
+    ;
+}
+
+a.brand-link {
+    width: 130px;
+    display: block;
+    margin: -46px auto 0;
+}
+
+.main-header {
+    transition: margin-left .3s ease-in-out;
+    display: flex
+}
+
+span.profile-image {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 100px;
+    display: flex;
+    object-fit: cover;
+    object-position: center;
+    background: #bebebe;
+}
+
+span.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.navbar-icons ul {
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-icons ul li {
+    background-color: #fff;
+    border-radius: 100px;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0px 3px 6px #00000029;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+    border-radius: 50px;
+}
+
+.ml-admin {
+    margin-left: 340px;
+}
+
+.card {
+    background: #FFFFFF;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.perpal {
+    background: #735BF3;
+}
+
+.box {
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 10px;
+    padding: 35px 15px !important;
+}
+
+.ml-admin {
+    margin-left: 354px;
+    width: calc(100% - 379px);
+}
+
+button.btn.btn-secondary {
+    background: #fff;
+    color: #735bf3;
+    padding: 10px;
+    width: 220px;
+    border: none;
+}
+
+.btn-secondary:not(:disabled):not(.disabled).active,
+.btn-secondary:not(:disabled):not(.disabled):active,
+.show>.btn-secondary.dropdown-toggle {
+    color: initial;
+    background-color: #fff;
+    border-color: #fff;
+    box-shadow: none;
+}
+
+.green {
+    background: #77B805;
+}
+
+.pitch {
+    background: #F6C979;
+}
+
+.blue {
+    background: #3ECBFF;
+}
+
+.text-green {
+    color: #77B805 !important;
+}
+
+.text-pitch {
+    color: #F6C979 !important;
+}
+
+.text-blue {
+    color: #77B805 !important;
+}
+
+i.widgets-icon {
+    height: 43px;
+    display: inline-block;
+}
+
+.actions {
+    width: 200px;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #F5FAFE !important;
+}
+
+.table-striped tbody tr:nth-of-type(even) {
+    background-color: #F9FAFB !important;
+}
+
+.theme-color {
+    color: #024293;
+}
+
+.fs-20 {
+    font-size: 20px;
+}
+
+.table>:not(caption)>*>* {
+    box-shadow: none;
+}
+
+.table tr,
+.table tr td {
+    border: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.table tr {
+    border-bottom: solid 5px #fff;
+}
+
+.table tbody tr:hover td {
+    background: #e1f4ff;
+    cursor: pointer;
+}
+
+.widgets h3 {
+    font-size: 30px;
+}
+
+.btn-success {
+    background: #77B805;
+    border: none;
+    font-size: 12px;
+    padding: 7px 20px;
+    border-radius: 7px;
+}
+
+.btn-danger {
+    background: #F10005;
+    border: none;
+    font-size: 12px;
+    padding: 7px 20px;
+    border-radius: 7px;
+}
+
+.main-header {
+    margin-top: 32px;
+    padding: 0 20px;
+}
+
+.filterInput, .calendar{
+    background: #F9FAFB;
+    box-shadow: 0px 2px 8px #00000021;
+    border-radius: 10px;
+    border: none;
+    color: #03053D;
+    font-size: 12px;
+    padding: 7px 20px;
+}
+
+.calendar{
+    width: 123px;
+}
+
+.search-icon{
+    transform: rotateZ(270deg);
+}
+
+.iconInput{
+    position: relative;
+}
+
+.iconInput input{
+    
+    padding-right: 33px;
+}
+
+.iconInput i{
+    position: absolute;
+    right: 10px;
+    top: 4px;
+}
+
+
+
+table th:first-child{
+    border-top-left-radius:5px;
+  }
+  
+  table th:last-child{
+    border-top-right-radius:5px;
+  }
+
+  table th{
+    font-weight: normal;
+    font-size: 15px;
+  }
+
+  table tr td, table tr th {
+    padding: 10px 20px !important;
+}
+
+.divider {
+    background: #E5EBF4;
+    height: 2px;
+    margin: 10px 0 20px 0;
+}
+
+.btn-info{
+     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#024293+0,022c62+100 */
+     background: #024293;
+     /* Old browsers */
+     background: -moz-linear-gradient(top, #024293 0%, #022c62 100%);
+     /* FF3.6-15 */
+     background: -webkit-linear-gradient(top, #024293 0%, #022c62 100%);
+     /* Chrome10-25,Safari5.1-6 */
+     background: linear-gradient(to bottom, #024293 0%, #022c62 100%);
+     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+     font-size: 12px;
+     display: flex;
+     align-items: center;
+     padding: 10px 20px;
+     border-radius: 10px;
+     font-weight: normal;
+     
+
+}
+
+
+.form-check-inline {
+    margin-right: 40px;
+}
+
+.btn-info i{
+    margin-right: 10px;
+}
+
+.pagination{
+    margin: 0;
+}
+
+.pagination .page-item a{
+    background: #F1F1F1;
+    box-shadow: 0px 3px 4px #0000001a;
+    color:#000;
+    font-size: 12px;
+    border-radius: 5px !important;
+    border: none;
+}
+
+.pagination .page-item a.active{
+    background: #024293;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #024293 0%, #022c62 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #024293 0%, #022c62 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #024293 0%, #022c62 100%);
+    color:#fff;
+
+}
+
+.page-item:not(:first-child) .page-link {
+    margin-left: 10px;
+}
+
+
+.pagination li.page-item a, .pagination li.page-item a{
+    padding: 10px 4px;
+    min-width: 40px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pagination li:first-child  a, .pagination li:last-child.page-item a{
+    padding: 10px 20px;
+    width: 100px;
+}
+
+
+.table tr td{
+    font-size: 15px;
+    vertical-align: middle;
+}
+.table tr th{
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+
+/*checkbox*/
+
+input[type="checkbox"]{visibility: hidden;}
+input[type="checkbox"] + label{cursor: pointer;}
+
+input[type="checkbox"] + label:before {
+    content: '';
+    position: absolute;
+    left: -10px; top: 0;
+    width: 1.25em; height: 1.25em;
+    border: solid 1px #929597;
+    background: #fff;
+  }
+
+  input[type="checkbox"]:checked + label::before{
+    border: solid 1px #77B805;
+  }
+
+  input[type="checkbox"]:checked + label:after {
+    content: '';
+    position: absolute;
+    transform: rotate(45deg);
+    height: 11px;
+    width: 6px;
+    border-bottom: 2px solid #77B805;
+    border-right: 2px solid #77B805;
+    left: -3px;
+    top: 3px;
+    z-index: 9;
+  }
+
+.ag-header-row{
+    background: #024293;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, #024293 0%, #022c62 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #024293 0%, #022c62 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #024293 0%, #022c62 100%);
+    color:#fff;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    
+ 
+}
+
+.ag-cell-label-container, .ag-cell-value{
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    border-bottom: solid 5px #fff;
+}
+
+.ag-row-even{
+    background-color:  #F9FAFB !important
+}
+
+.ag-row-odd{
+   background-color:  #F5FAFE !important;
+}
+
+
+.ag-grid-height{    height: calc(100vh - 300px);}
+
+
+.form-label{
+    position: absolute;
+    background: #fff;
+    font-size: 13px;
+    top: -9px;
+    left: 36px;
+    padding: 0 5px;
+    margin: 0;
+    /* opacity: 0.7; */
+    color: #0000009c;
+}
+
+.custom-form .form-control{
+    margin-bottom: 20px;
+    font-weight: 500;
+    border-color: #C9D6DF;
+}
+
+
+.custom-form input[type="checkbox"] + label {
+    cursor: pointer;
+    font-size: 14px;
+}
+
+
+.checkLabel{
+    color: #024293;
+    font-size: 14px;
+}
+
+.custom-form input[type="checkbox"]:checked + label:after {
+    content: '';
+    position: absolute;
+    transform: rotate(45deg);
+    height: 10px;
+    width: 6px;
+    border-bottom: 2px solid #77B805;
+    border-right: 2px solid #77B805;
+    left: -4px;
+    top: 5px;
+    z-index: 9;
+}
+
+.custom-form input[type="checkbox"] + label:before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 3px;
+    width: 1.2em;
+    height: 1.2em;
+    border: solid 1px #929597;
+    background: #fff;
+}
+
+.btn-min-width{
+    min-width: 120px
+}
+
+.company-img{
+    width: 270px;
+    height: 270px;
+    box-shadow: 0 2px 9px #00000021;
+
+}
+
+.btn-line{
+    border: solid 1px #024293;
+    background: #fff;
+    font-weight: 600;
+    color: #024293;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border-radius: 10px;
+    height: 40px;
+
+}
+
+
+.btn-line i{
+    margin-right: 7px;
+}
+
+.btn-line i img{
+    width: 17px;
+}
+
+.profileMedia{width:200px}
+
+.profileImage {
+    border: solid 2px #22215B;
+    border-radius: 30px;
+    overflow: hidden;
+    padding: 5px;
+}
+
+.profileImage img{
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    border-radius: 25px;
+}
+
+hr{
+    border-top: 1px solid #9f9f9f;
+}
+
+.btn.btn-info:focus, .btn-info:not(:disabled):not(.disabled):active{
+    color: #fff;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#024293+0,022c62+100 */
+     background: #024293;
+     /* Old browsers */
+     background: -moz-linear-gradient(top, #024293 0%, #022c62 100%);
+     /* FF3.6-15 */
+     background: -webkit-linear-gradient(top, #024293 0%, #022c62 100%);
+     /* Chrome10-25,Safari5.1-6 */
+     background: linear-gradient(to bottom, #024293 0%, #022c62 100%);
+     /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+
+
+
+
+  
+
+@media screen and (max-width:1500px) {
+    button.btn.btn-secondary {
+        width: 181px;
+    }
+}
+
+@media screen and (max-width:1400px) {
+    button.btn.btn-secondary {
+        width: 100%;
+    }
+    button.btn.btn-secondary {
+        font-size: 13px;
+    }
+    .widgets h3 {
+        font-size: 30px;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .ml-admin {
+        margin-left: 0;
+        width: calc(100% - 40px);
+        margin: 20px;
+    }
+    .main-sidebar {
+        left: -300px;
+    }
+}
